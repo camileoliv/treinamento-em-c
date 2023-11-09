@@ -8,6 +8,7 @@ int main()
 {
 
     float nota[3], media, soma;
+    char situacao;
     int i, tamanho=3;
 
     for (i = 0; i < tamanho; i++)
@@ -26,7 +27,25 @@ int main()
     }
     
     media = soma / tamanho;
-    printf("Sua média é: %.2f",media);
+
+       situacao = media;
+
+    if (situacao >= 7)
+    {
+        strcpy(situacao,"Aprovado!");
+    } 
+    else if(situacao >= 5) 
+    {
+        strcpy(situacao,"Recuperação.");
+    } 
+    else 
+    {
+        strcpy(situacao,"Reprovado!");
+    }
+
+    printf("Sua média é: %.2f \n",media);
+    printf("Situação: %c \n",situacao);
+    
 
     return 0;
 }
