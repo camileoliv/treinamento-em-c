@@ -6,14 +6,16 @@
 
 int main()
 {
-    float nota[3];
-    int i;
-    int tamanho =5;
+
+    float nota[3], media, soma;
+    int i, tamanho=3;
 
     for (i = 0; i < tamanho; i++)
     {
     printf("Digite a %iª nota: ",i+1);
-    scanf("%f", &nota[i]);  
+    scanf("%f", &nota[i]);
+    soma += nota[i];
+
     }
 
     printf("\n Mostrando as notas\n");
@@ -23,5 +25,8 @@ int main()
     printf("%dª nota: %.1f \n",i+1, nota[i]);
     }
     
+    media = soma / tamanho;
+    printf("Sua média é: %.2f",media);
+
     return 0;
-} 
+}
